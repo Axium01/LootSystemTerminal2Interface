@@ -2,18 +2,37 @@
 const loot = [];
 const headerText = ["name", "value"];
 
+// sends an error message to the page's validation message (accepts 1 string)
+function errorSend(e) {
+    console.log("[ERROR]: " + e);
+    document.getElementById("validation").textContent = e;
+}
+
+// refreshes the displayed table and adds a new row to the table if the information set is valid
 function addLoot() {
-    // input (existing elements)
-    const lootName = document.getElementById("lootName").value;
-    const lootValue = document.getElementById("lootValue").value;
-    const validation = document.getElementById("")
+    // input info (existing elements)
+    let lootName = document.getElementById("lootName").value;
+    let lootValue = document.getElementById("lootValue").value;
+    
+    // validation
+    if (lootName == "" || lootValue == "") {
+        errorSend("Loot Name or Value is empty!");
+        return;
+    } else if (isNaN(Number(lootValue)) || Number(lootValue) <= 0) {
+        errorSend("Loot Value must be a number that is above 0.");
+        return;
+    }
+
+    // convert to an actual number
+    lootValue = Number(lootValue);
+    
+    // creating table
     loot.push({name: lootName, value: lootValue});
-    console.log(loot)
     const container = document.getElementById("tableContainer");
     document.getElementById("tableContainer").innerHTML = "";
     const table = document.createElement("table");
 
-    // 1. Create Table Header
+    // table header
     const thead = document.createElement("thead");
     const headerRow = document.createElement("tr");
     const headers = headerText;
