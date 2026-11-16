@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Milo Wearn">
+        <title>LootSystemTerminal2Interface</title>
+        <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- loot table section -->
+        <div id="tableContainer">There's nothing in here yet!</div>
+        
+        <!-- loot input -->
+        <form>
+            <label for="lootname">Loot Name:</label>
+            <input type="text" id="lootName" name="lootname"><br><br>
+            <label for="lootvalue">Loot Value:</label>
+            <input type="text" id="lootValue" name="lootvalue"><br><br>
+        </form>
+        <button onclick="addLoot()">Add Loot</button>
+        
+        <!-- validation message -->
+        <p id="validation"></p>
+
+        
+    </body>
+</html>
