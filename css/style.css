@@ -2,16 +2,21 @@ body {
     font-family: 'Courier New', monospace;
 }
 
-div {
-    padding-bottom: 15px;
-}
-
 table, th, td {
     border-collapse: collapse;
     border: 1px solid;
-    
 }
 
 th, td {
     padding: 5px;
+}
+
+.table-holder {
+    padding-bottom: 10px;
+    height: 250px;
+}
+
+.table-container {
+    max-height: 200px; 
+    overflow-y: auto;
 }
