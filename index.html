@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Milo Wearn">
         <title>LootSystemTerminal2Interface</title>
-        <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/index.js"></script>
     </head>
     <body>
+        <p></p>
         <!-- loot table section -->
-        <div id="tableContainer">There's nothing in here yet!</div>
+        <div class="table-holder">
+            <div id="tableContainer" class="table-container">The table will appear once loot is added.</div>
+            <div id="totalContainer" class="total-container">Total Value: -</div>
+        </div>
         
         <!-- loot input -->
         <form>
@@ -23,7 +27,5 @@
         
         <!-- validation message -->
         <p id="validation"></p>
-
-        
     </body>
 </html>
